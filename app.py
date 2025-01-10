@@ -74,7 +74,7 @@ def index():
     if request.method == 'POST':
         uid = request.form['uid']
         start_time = time.time()
-        years_to_check = ['2006', '2007', '2008']
+        years_to_check = ['2006', '2007', '2008','2009','2010']
         
         # Run the checks for all the years concurrently
         valid_dob = asyncio.run(check_multiple_years(uid, years_to_check))
