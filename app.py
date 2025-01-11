@@ -67,14 +67,15 @@ async def check_multiple_years(uid, years):
             if year_result:
                 return year_result  # Return valid DOB for the year
     return None
-
 # Route to handle the user input and process the check
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
         uid = request.form['uid']
         start_time = time.time()
-        years_to_check = ['2009', '2007', '2008','2010']
+        
+        # Updated order of years to check
+        years_to_check = ['2008', '2007', '2009', '2010', '2006']
         
         # Run the checks for all the years concurrently
         valid_dob = asyncio.run(check_multiple_years(uid, years_to_check))
