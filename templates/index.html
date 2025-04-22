@@ -5,47 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UID DOB Checker</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <style>
-        /* Styling for the loading spinner */
-        .loader {
-            border: 8px solid #f3f3f3; /* Light gray background */
-            border-top: 8px solid #3498db; /* Blue color for spinner */
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-
-        /* Spin animation */
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Overlay background */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-        }
-
-        /* Center content in overlay */
-        .overlay-content {
-            text-align: center;
-            color: white;
-            font-size: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
+     <!-- Scrolling disclaimer -->
+     <div class="disclaimer">
+      <p>
+          ⚠️ This is an open-source utility tool. Please use it responsibly. The developer does not hold any liability for misuse, data loss, or unintended consequences.
+
+      </p>
+  </div>
     <div class="container">
         <h1>UID DOB Checker</h1>
         <form id="uidForm" method="POST" action="/">
